@@ -1,4 +1,4 @@
-# Welcome
+# 👋 Welcome
 
 👋 Welcome to Ranajay Das's portfolio website, built using Astro and Tailwind!
 
