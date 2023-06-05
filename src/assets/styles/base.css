@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 400;
+    font-display: block;
+    src: url('/fonts/epilogue-regular.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 600;
+    font-display: block;
+    src: url('/fonts/epilogue-600.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 700;
+    font-display: block;
+    src: url('/fonts/epilogue-700.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 800;
+    font-display: block;
+    src: url('/fonts/epilogue-800.woff2') format('woff2');
+  }
+
+  html {
+    @apply text-lg;
+  }
+
+  h1 {
+    @apply text-[64px] md:text-[80px] leading-[90px] font-semibold;
+  }
+}
