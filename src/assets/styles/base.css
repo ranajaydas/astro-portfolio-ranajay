@@ -43,10 +43,6 @@
     @apply text-[64px] md:text-[80px] leading-[90px] font-semibold;
   }
 
-  h3 {
-    @apply text-[28px] leading-[42px] font-semibold;
-  }
-
   hr {
     border-width: 1.5px 0px;
     border-style: solid;
@@ -58,5 +54,9 @@
   .icon {
     filter: invert(14%) sepia(0%) saturate(956%) hue-rotate(224deg)
       brightness(98%) contrast(90%);
+  }
+
+  .title {
+    @apply text-[28px] leading-[42px] font-semibold;
   }
 }
