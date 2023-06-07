@@ -1,5 +1,4 @@
 ---
-import Icon from "@components/common/Icon.astro";
 import iag from "@assets/logos/iag.svg";
 import nrma from "@assets/logos/nrma.svg";
 import firstrescue from "@assets/logos/firstrescue.svg";
@@ -7,6 +6,8 @@ import cipherstash from "@assets/logos/cipherstash.svg";
 import bluedot from "@assets/logos/bluedot.svg";
 
 const logos = [iag, nrma, firstrescue, cipherstash, bluedot];
+const alt = (path: string) =>
+  path.replace(/.*\//, "").replace(/\..*/, "") + " logo";
 ---
 
 <div>
@@ -14,7 +15,12 @@ const logos = [iag, nrma, firstrescue, cipherstash, bluedot];
   <div class="flex flex-wrap my-8 justify-between">
     {
       logos.map((logo) => (
-        <Icon src={logo} altSuffix="logo" class="icon h-16 p-3 my-4 mx-auto" />
+        <img
+          src={logo}
+          alt={alt(logo)}
+          height="64"
+          class="icon p-3 my-4 mx-auto"
+        />
       ))
     }
   </div>
