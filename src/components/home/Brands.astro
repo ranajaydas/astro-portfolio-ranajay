@@ -21,13 +21,13 @@ const alt = (path: string) =>
   <div class="flex flex-wrap my-8 justify-between">
     {
       logos.map(([logo, width, link]) => (
-        <a href={link} target="_blank">
+        <a href={link} target="_blank" class="my-4 mx-auto">
           <img
             src={logo}
             alt={alt(logo)}
             width={width}
             height="64"
-            class="icon p-3 my-4 mx-auto"
+            class="icon p-3"
           />
         </a>
       ))
