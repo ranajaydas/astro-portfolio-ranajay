@@ -11,10 +11,12 @@ const logos = [iag, nrma, firstrescue, cipherstash, bluedot];
 
 <div>
   <hr />
-  <div
-    class="flex flex-wrap my-12 [&>img]:h-16 [&>img]:p-3 [&>img]:mx-auto justify-between"
-  >
-    {logos.map((logo) => <Icon src={logo} altSuffix="logo" class="icon" />)}
+  <div class="flex flex-wrap my-8 justify-between">
+    {
+      logos.map((logo) => (
+        <Icon src={logo} altSuffix="logo" class="icon h-16 p-3 my-4 mx-auto" />
+      ))
+    }
   </div>
   <hr />
 </div>
