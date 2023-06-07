@@ -1,0 +1,24 @@
+---
+import IconCard from "@components/common/IconCard.astro";
+import pancakes from "@assets/images/pancakes.svg";
+import popcorn from "@assets/images/popcorn.svg";
+import bento from "@assets/images/bento.svg";
+---
+
+<div class="py-[180px] px-4 sm:px-20 md:px-4 flex justify-around flex-wrap">
+  <IconCard
+    iconSrc={pancakes}
+    title="Developer"
+    description="I’m a Fullstack Developer with 15+ years of software building experience"
+  />
+  <IconCard
+    iconSrc={popcorn}
+    title="Storyteller"
+    description="At work, I’m known for my fun and engaging storytelling, where I simplify complex technical topics for non-technical audiences"
+  />
+  <IconCard
+    iconSrc={bento}
+    title="Author"
+    description="In 2018, I wrote and published my debut fiction novel, Aoirei"
+  />
+</div>

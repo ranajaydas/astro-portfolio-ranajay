@@ -43,6 +43,10 @@
     @apply text-[64px] md:text-[80px] leading-[90px] font-semibold;
   }
 
+  h3 {
+    @apply text-[28px] leading-[42px] font-semibold;
+  }
+
   hr {
     border-width: 1.5px 0px;
     border-style: solid;

@@ -1,10 +1,13 @@
 ---
 export interface Props {
   src: string;
+  altSuffix?: string;
+  class?: string;
 }
 
-const { src } = Astro.props;
-const alt = src.replace(/.*\//, "").replace(/\..*/, "") + " logo";
+const { src, altSuffix, class: className } = Astro.props;
+const alt =
+  src.replace(/.*\//, "").replace(/\..*/, "") + ` ${altSuffix || "icon"}`;
 ---
 
-<img src={src} alt={alt} class="icon" />
+<img src={src} alt={alt} class={className} />
