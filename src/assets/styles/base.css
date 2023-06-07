@@ -49,3 +49,10 @@
     border-color: rgba(0, 0, 0, 0.2);
   }
 }
+
+@layer components {
+  .icon {
+    filter: invert(14%) sepia(0%) saturate(956%) hue-rotate(224deg)
+      brightness(98%) contrast(90%);
+  }
+}
