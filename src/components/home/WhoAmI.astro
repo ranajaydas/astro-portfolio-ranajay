@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import pancakes from "@assets/images/pancakes.svg";
 import popcorn from "@assets/images/popcorn.svg";
 import bento from "@assets/images/bento.svg";
@@ -13,12 +14,13 @@ const imgClass = "mt-16 mb-8 lg:mb-[100px]";
   class="py-[100px] md:py-[150px] px-4 sm:px-20 md:px-4 flex justify-around flex-wrap"
 >
   <div class={cardClass}>
-    <img
+    <Image
       src={pancakes}
       alt="pancakes (all bout dem stacks)"
       width={imageSize}
       height={imageSize}
       class={imgClass}
+      format="svg"
     />
     <p class="title mb-5">Developer</p>
     <p>
@@ -26,12 +28,13 @@ const imgClass = "mt-16 mb-8 lg:mb-[100px]";
     </p>
   </div>
   <div class={cardClass}>
-    <img
+    <Image
       src={popcorn}
       alt="popcorn (i got a story to tell)"
       width={imageSize}
       height={imageSize}
       class={imgClass}
+      format="svg"
     />
     <p class="title mb-5">Storyteller</p>
     <p>
@@ -40,12 +43,13 @@ const imgClass = "mt-16 mb-8 lg:mb-[100px]";
     </p>
   </div>
   <div class={cardClass}>
-    <img
+    <Image
       src={bento}
       alt="bento (i wrote a book set in japan)"
       width={imageSize}
       height={imageSize}
       class={imgClass}
+      format="svg"
     />
     <p class="title mb-5">Author</p>
     <p>

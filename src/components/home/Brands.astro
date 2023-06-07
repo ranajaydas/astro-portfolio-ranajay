@@ -1,33 +1,33 @@
 ---
+import { Image } from "@astrojs/image/components";
 import iag from "@assets/logos/iag.svg";
 import nrma from "@assets/logos/nrma.svg";
 import firstrescue from "@assets/logos/firstrescue.svg";
 import cipherstash from "@assets/logos/cipherstash.svg";
 import bluedot from "@assets/logos/bluedot.svg";
 
-const logos = [
-  [iag, "81", "https://www.iag.com.au/"],
-  [nrma, "91", "https://www.nrma.com.au/"],
-  [firstrescue, "273", "https://www.firstrescue.co.nz/"],
-  [cipherstash, "221", "https://www.cipherstash.com/"],
-  [bluedot, "204", "https://www.bluedot.io/"],
+const logos: Array<[ImageMetadata, string, number, string]> = [
+  [iag, "IAG logo", 81, "https://www.iag.com.au/"],
+  [nrma, "NRMA Logo", 91, "https://www.nrma.com.au/"],
+  [firstrescue, "First Rescue Logo", 273, "https://www.firstrescue.co.nz/"],
+  [cipherstash, "CipherStash Logo", 221, "https://www.cipherstash.com/"],
+  [bluedot, "Bluedot Logo", 204, "https://www.bluedot.io/"],
 ];
-const alt = (path: string) =>
-  path.replace(/.*\//, "").replace(/\..*/, "") + " logo";
 ---
 
 <div>
   <hr />
   <div class="flex flex-wrap my-8 justify-between">
     {
-      logos.map(([logo, width, link]) => (
+      logos.map(([logo, alt, width, link]) => (
         <a href={link} target="_blank" class="my-4 mx-auto">
-          <img
+          <Image
             src={logo}
-            alt={alt(logo)}
+            alt={alt}
             width={width}
-            height="64"
+            height={64}
             class="icon p-3"
+            format="svg"
           />
         </a>
       ))

@@ -1,4 +1,5 @@
 ---
+import { Image } from "@astrojs/image/components";
 import ranajay from "@assets/images/ranajay.webp";
 ---
 
@@ -10,11 +11,12 @@ import ranajay from "@assets/images/ranajay.webp";
     <p>I’m a full stack developer and author</p>
   </div>
 
-  <img
+  <Image
     class="mt-[60px]"
     src={ranajay}
     alt="Ranajay Das holding his book Aoirei"
-    width="430"
-    height="430"
+    width={430}
+    height={430}
+    format="webp"
   />
 </div>
