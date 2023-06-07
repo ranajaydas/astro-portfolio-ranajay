@@ -2,6 +2,8 @@
 
 👋 Welcome to Ranajay Das's portfolio website, built using Astro and Tailwind!
 
+👉 [Check out the live site here](https://ranajay.dev)
+
 ## 🧞 Commands
 
 All commands are run from the root of the project, from a terminal:
