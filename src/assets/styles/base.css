@@ -48,16 +48,43 @@
     border-style: solid;
     border-color: rgba(0, 0, 0, 0.2);
   }
+
+  a {
+    position: relative;
+  }
 }
 
 @layer components {
   .icon {
     filter: invert(14%) sepia(0%) saturate(956%) hue-rotate(224deg)
       brightness(98%) contrast(90%);
+    transition: filter 0.2s;
+  }
+
+  .icon:hover {
+    filter: invert(77%) sepia(41%) saturate(682%) hue-rotate(347deg)
+      brightness(104%) contrast(101%);
+    transition: filter 0.2s ease-in-out;
   }
 
   .title {
     @apply text-[28px] leading-[42px] font-semibold;
+  }
+
+  .animated-a::before {
+    background: #ffcb4c;
+    content: "";
+    inset: 0;
+    position: absolute;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+
+  .animated-a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
   }
 
   /* Courtesy of https://codepen.io/jakejarvis/pen/pBZWZw */
