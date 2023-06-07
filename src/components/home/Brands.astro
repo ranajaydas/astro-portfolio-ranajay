@@ -1,0 +1,15 @@
+---
+import Icon from "@components/common/Icon.astro";
+
+const logos = ["iag", "nrma", "firstrescue", "cipherstash", "bluedot"];
+---
+
+<div>
+  <hr />
+  <div
+    class="flex flex-wrap my-12 [&>svg]:h-16 [&>svg]:fill-stone-700 [&>svg]:p-3 [&>svg]:mx-auto justify-between"
+  >
+    {logos.map((logo) => <Icon path={`logos/${logo}`} />)}
+  </div>
+  <hr />
+</div>

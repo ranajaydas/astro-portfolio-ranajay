@@ -4,35 +4,35 @@
 
 @layer base {
   @font-face {
-    font-family: 'Epilogue';
+    font-family: "Epilogue";
     font-style: normal;
     font-weight: 400;
     font-display: block;
-    src: url('/fonts/epilogue-regular.woff2') format('woff2');
+    src: url("/fonts/epilogue-regular.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Epilogue';
+    font-family: "Epilogue";
     font-style: normal;
     font-weight: 600;
     font-display: block;
-    src: url('/fonts/epilogue-600.woff2') format('woff2');
+    src: url("/fonts/epilogue-600.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Epilogue';
+    font-family: "Epilogue";
     font-style: normal;
     font-weight: 700;
     font-display: block;
-    src: url('/fonts/epilogue-700.woff2') format('woff2');
+    src: url("/fonts/epilogue-700.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Epilogue';
+    font-family: "Epilogue";
     font-style: normal;
     font-weight: 800;
     font-display: block;
-    src: url('/fonts/epilogue-800.woff2') format('woff2');
+    src: url("/fonts/epilogue-800.woff2") format("woff2");
   }
 
   html {
@@ -41,5 +41,11 @@
 
   h1 {
     @apply text-[64px] md:text-[80px] leading-[90px] font-semibold;
+  }
+
+  hr {
+    border-width: 1.5px 0px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.2);
   }
 }
