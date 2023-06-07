@@ -1,10 +1,10 @@
 ---
 export interface Props {
-  path: string;
+  src: string;
 }
 
-const { path } = Astro.props;
-const { default: innerHTML } = await import(`/src/assets/${path}.svg?raw`);
+const { src } = Astro.props;
+const alt = src.replace(/.*\//, "").replace(/\..*/, "") + " logo";
 ---
 
-<Fragment set:html={innerHTML} />
+<img src={src} alt={alt} />

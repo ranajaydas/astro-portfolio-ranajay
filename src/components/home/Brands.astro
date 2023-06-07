@@ -1,15 +1,20 @@
 ---
 import Icon from "@components/common/Icon.astro";
+import iag from "@assets/logos/iag.svg";
+import nrma from "@assets/logos/nrma.svg";
+import firstrescue from "@assets/logos/firstrescue.svg";
+import cipherstash from "@assets/logos/cipherstash.svg";
+import bluedot from "@assets/logos/bluedot.svg";
 
-const logos = ["iag", "nrma", "firstrescue", "cipherstash", "bluedot"];
+const logos = [iag, nrma, firstrescue, cipherstash, bluedot];
 ---
 
 <div>
   <hr />
   <div
-    class="flex flex-wrap my-12 [&>svg]:h-16 [&>svg]:fill-stone-700 [&>svg]:p-3 [&>svg]:mx-auto justify-between"
+    class="flex flex-wrap my-12 [&>img]:h-16 [&>img]:p-3 [&>img]:mx-auto justify-between"
   >
-    {logos.map((logo) => <Icon path={`logos/${logo}`} />)}
+    {logos.map((logo) => <Icon src={logo} />)}
   </div>
   <hr />
 </div>
