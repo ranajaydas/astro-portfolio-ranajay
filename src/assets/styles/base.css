@@ -5,6 +5,8 @@
 @layer base {
   :root {
     --color-emoji-yellow: rgb(255 203 76);
+    --color-text-selector: 0, 123, 255;
+    --selector-size: 24px;
   }
 
   @font-face {
@@ -40,6 +42,7 @@
   }
 
   html {
+    scroll-behavior: smooth;
     @apply text-lg;
   }
 
@@ -92,7 +95,7 @@
     transform-origin: left;
   }
 
-  /* Courtesy of https://codepen.io/jakejarvis/pen/pBZWZw */
+  /* Waving animation courtesy of https://codepen.io/jakejarvis/pen/pBZWZw */
   .wave {
     animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
     animation-duration: 2.5s; /* Change to speed up or slow down */
@@ -127,6 +130,42 @@
       transform: rotate(0deg);
     }
   }
+  /* End of waving animation */
+
+  /* Text selection effect */
+  .selection-tool {
+    background-color: rgba(var(--color-text-selector), 0.3);
+    position: relative;
+    display: inline-block;
+    transition: background-color 0.5s ease-in-out;
+  }
+
+  .selection-tool::before,
+  .selection-tool::after {
+    content: "";
+    position: absolute;
+    background-color: rgba(var(--color-text-selector), 0.5);
+    width: var(--selector-size);
+    height: var(--selector-size);
+    bottom: calc(var(--selector-size) * -1);
+    z-index: 1;
+  }
+
+  .selection-tool::before {
+    left: calc(var(--selector-size) * -1);
+    border-radius: 50% 0 50% 50%;
+  }
+
+  .selection-tool::after {
+    right: calc(var(--selector-size) * -1);
+    border-radius: 0 50% 50% 50%;
+  }
+
+  .selection-tool:hover {
+    background-color: transparent;
+    transition-duration: 0.2s;
+  }
+  /* End of text selection effect */
 }
 
 @layer utilities {
