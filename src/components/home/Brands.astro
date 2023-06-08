@@ -16,8 +16,10 @@ const logos: Array<[ImageMetadata, string, number, string]> = [
 ---
 
 <div>
-  <hr />
-  <div class="flex flex-wrap my-8 justify-between">
+  <div class="text-center my-[100px]">
+    <h2>Brands I've helped</h2>
+  </div>
+  <div class="flex flex-wrap justify-between mb-[144px]">
     {
       logos.map(([logo, alt, width, link]) => (
         <a href={link} target="_blank" class="my-4 mx-auto">
@@ -33,5 +35,4 @@ const logos: Array<[ImageMetadata, string, number, string]> = [
       ))
     }
   </div>
-  <hr />
 </div>

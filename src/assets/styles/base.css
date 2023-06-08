@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --color-emoji-yellow: rgb(255 203 76);
+  }
+
   @font-face {
     font-family: "Epilogue";
     font-style: normal;
@@ -43,6 +47,10 @@
     @apply text-[64px] md:text-[80px] leading-[90px] font-semibold;
   }
 
+  h2 {
+    @apply text-[48px] leading-[80px] font-semibold;
+  }
+
   hr {
     border-width: 1.5px 0px;
     border-style: solid;
@@ -55,24 +63,21 @@
 }
 
 @layer components {
-  .icon {
-    filter: invert(14%) sepia(0%) saturate(956%) hue-rotate(224deg)
-      brightness(98%) contrast(90%);
-    transition: filter 0.2s;
+  .clip-hero {
+    width: 550px;
+    background-color: var(--color-emoji-yellow);
+    clip-path: circle(50%);
+    position: relative;
   }
 
-  .icon:hover {
-    filter: invert(77%) sepia(41%) saturate(682%) hue-rotate(347deg)
-      brightness(104%) contrast(101%);
-    transition: filter 0.2s ease-in-out;
-  }
-
-  .title {
-    @apply text-[28px] leading-[42px] font-semibold;
+  .clip-hero:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
   }
 
   .animated-a::before {
-    background: #ffcb4c;
+    background: var(--color-emoji-yellow);
     content: "";
     inset: 0;
     position: absolute;
@@ -121,5 +126,23 @@
     100% {
       transform: rotate(0deg);
     }
+  }
+}
+
+@layer utilities {
+  .title {
+    @apply text-[28px] leading-[42px] font-semibold;
+  }
+
+  .icon {
+    filter: invert(14%) sepia(0%) saturate(956%) hue-rotate(224deg)
+      brightness(98%) contrast(90%);
+    transition: filter 0.2s;
+  }
+
+  .icon:hover {
+    filter: invert(77%) sepia(41%) saturate(682%) hue-rotate(347deg)
+      brightness(104%) contrast(101%);
+    transition: filter 0.2s ease-in-out;
   }
 }

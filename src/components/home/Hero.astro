@@ -3,21 +3,21 @@ import { Image } from "@astrojs/image/components";
 import ranajay from "@assets/images/ranajay.webp";
 ---
 
-<div
-  class="flex items-center justify-center lg:justify-between flex-wrap lg:flex-nowrap"
->
+<div class="flex items-center justify-around flex-wrap lg:flex-nowrap">
   <div class="min-w-[370px] max-w-[370px] text-center">
     <h1 class="mb-10"><span class="wave">👋</span> Hi! I’m Ranajay</h1>
     <p>I’m a full stack developer and author</p>
   </div>
 
-  <Image
-    class="mt-[60px]"
-    src={ranajay}
-    alt="Ranajay Das holding his book Aoirei"
-    width={430}
-    height={430}
-    format="webp"
-    loading="eager"
-  />
+  <div class="clip-hero mt-[60px]">
+    <Image
+      class="absolute -translate-x-2/4 -translate-y-2/4 left-2/4 top-[62%]"
+      src={ranajay}
+      alt="Ranajay Das holding his book Aoirei"
+      width={430}
+      height={430}
+      format="webp"
+      loading="eager"
+    />
+  </div>
 </div>
