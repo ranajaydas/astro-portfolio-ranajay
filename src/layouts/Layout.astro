@@ -1,5 +1,8 @@
 ---
 import "@assets/styles/base.css";
+import { inject } from "@vercel/analytics";
+
+inject(); // Enable Vercel analytics
 export interface Props {
 	title?: string;
 }
