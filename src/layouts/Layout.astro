@@ -6,8 +6,8 @@ export interface Props {
 }
 
 const { title } = Astro.props;
-console.log("ANALYTICS!!", import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID);
-console.log("ANALYTICS 2!!", import.meta.env.VERCEL_ANALYTICS_ID);
+console.log("ANALYTICS!!", process.env.PUBLIC_VERCEL_ANALYTICS_ID);
+console.log("ANALYTICS 2!!", process.env.VERCEL_ANALYTICS_ID);
 ---
 
 <!DOCTYPE html>
@@ -44,3 +44,8 @@ console.log("ANALYTICS 2!!", import.meta.env.VERCEL_ANALYTICS_ID);
 		<slot />
 	</body>
 </html>
+
+<script>
+	console.log("ANALYTICS!!", process.env.PUBLIC_VERCEL_ANALYTICS_ID);
+	console.log("ANALYTICS 2!!", process.env.VERCEL_ANALYTICS_ID);
+</script>
