@@ -85,9 +85,9 @@
   }
 
   .animated-a::before {
+    @apply inset-[-12px_0_-13px_0] md:inset-[-4px_0_-5px_0];
     background: var(--color-emoji-yellow);
     content: "";
-    inset: -4px 0 -5px 0;
     position: absolute;
     transform: scaleX(0);
     transform-origin: right;
