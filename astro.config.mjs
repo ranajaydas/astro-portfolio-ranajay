@@ -3,17 +3,6 @@ import tailwind from "@astrojs/tailwind";
 import image from "@astrojs/image";
 import vercel from "@astrojs/vercel/static";
 
-console.log("VERCEL_ANALYTICS_ID", process.env.VERCEL_ANALYTICS_ID);
-console.log("VERCEL_ANALYTICS_ID", import.meta.env.VERCEL_ANALYTICS_ID);
-console.log(
-  "PUBLIC_VERCEL_ANALYTICS_ID",
-  process.env.PUBLIC_VERCEL_ANALYTICS_ID
-);
-console.log(
-  "PUBLIC_VERCEL_ANALYTICS_ID",
-  import.meta.env.PUBLIC_VERCEL_ANALYTICS_ID
-);
-
 // https://astro.build/config
 export default defineConfig({
   output: "static",
