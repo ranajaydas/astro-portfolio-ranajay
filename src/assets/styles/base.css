@@ -87,7 +87,7 @@
   .animated-a::before {
     background: var(--color-emoji-yellow);
     content: "";
-    inset: 0;
+    inset: -4px 0 -5px 0;
     position: absolute;
     transform: scaleX(0);
     transform-origin: right;
