@@ -148,6 +148,7 @@
   .selection-tool::before,
   .selection-tool::after {
     content: "";
+    pointer-events: none;
     position: absolute;
     background-color: rgba(var(--color-text-selector), 0.5);
     width: var(--selector-size);
