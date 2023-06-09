@@ -5,13 +5,13 @@ import vercel from "@astrojs/vercel/static";
 
 // https://astro.build/config
 export default defineConfig({
+  output: "static",
   integrations: [
     tailwind(),
     image({
       serviceEntryPoint: "@astrojs/image/sharp",
     }),
   ],
-  output: "server",
   adapter: vercel({ analytics: true }),
   vite: {
     define: {
