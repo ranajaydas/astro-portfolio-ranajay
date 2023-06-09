@@ -15,24 +15,26 @@ const logos: Array<[ImageMetadata, string, number, string]> = [
 ];
 ---
 
-<div>
-  <div class="text-center my-[100px]">
-    <h2>Brands I've helped</h2>
-  </div>
-  <div class="flex flex-wrap justify-between mb-[144px]">
-    {
-      logos.map(([logo, alt, width, link]) => (
-        <a href={link} target="_blank" class="my-4 mx-auto">
-          <Image
-            src={logo}
-            alt={alt}
-            width={width}
-            height={64}
-            class="icon p-3"
-            format="svg"
-          />
-        </a>
-      ))
-    }
+<div class="min-h-full flex items-center justify-center w-full">
+  <div class="w-full">
+    <div class="text-center mb-[50px]">
+      <h2>Brands I've helped</h2>
+    </div>
+    <div class="flex flex-wrap justify-between">
+      {
+        logos.map(([logo, alt, width, link]) => (
+          <a href={link} target="_blank" class="my-4 mx-auto">
+            <Image
+              src={logo}
+              alt={alt}
+              width={width}
+              height={64}
+              class="icon p-3"
+              format="svg"
+            />
+          </a>
+        ))
+      }
+    </div>
   </div>
 </div>

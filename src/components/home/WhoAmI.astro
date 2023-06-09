@@ -6,15 +6,16 @@ import bento from "@assets/images/bento.svg";
 
 const imageSize = 240;
 const cardClass =
-  "flex flex-col max-w-[250px] justify-start items-center text-center mx-2";
+  "flex flex-col max-w-[250px] justify-start items-center text-center mx-2 min-h-[666px]";
 const imgClass = "mt-16 mb-8 lg:mb-[100px]";
 ---
 
 <div
-  class="py-[100px] mt:py-[100px] mb:py-[144px] px-4 sm:px-20 md:px-4 flex justify-around flex-wrap"
+  class="min-h-full px-4 sm:px-20 md:px-4 flex flex-wrap justify-around items-center pt-[100px] md:pt-0"
+  id="whodis"
 >
   <!-- Developer -->
-  <div class={cardClass} id="pancakes">
+  <div class={cardClass}>
     <Image
       src={pancakes}
       alt="pancakes (all bout dem stacks)"
